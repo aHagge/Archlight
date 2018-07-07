@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6a39e102d96cb4a827d6540000dc8a, type: 3}
+  m_Name: Sinister Crow
+  m_EditorClassIdentifier: 
+  Name: Sinister Crow
+  description: 'Fast and small. Often found in the woods but never alone. Never underestimate
+    their power and cuteness. '
+  Icon: {fileID: 0}
+  flocksprite: {fileID: 21300000, guid: 123addf45b04d614ca6179578836c01b, type: 3}
+  idleanim: []
+  look: {fileID: 21300000, guid: 5aad56852a065c74482c050e39aff62a, type: 3}
+  Health: 40
+  size: {x: 7, y: 7}
+  Attack1: Burn
+  attack1_dmg: 5
+  Attack2: Ignite
+  attack2_dmg: 5
+  Attack3: Cauterize
+  attack3_dmg: 5

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5143c360e201a7409c4d53c1c09e8df, type: 3}
+  m_Name: Maoi Laxaland
+  m_EditorClassIdentifier: 
+  NPC_Name: Maoi Laxaland
+  idle_anim: {fileID: 21300004, guid: 51fcf614f8d232a47ae3aad8dad599bc, type: 3}
+  Dialogs:
+  - ' Hello, my name is Maoi. I am the best, and the only blacksmith in town. So if
+    you ever need to buy something out of metal just come to me and il see what I
+    can do for you. '
+  - HOLY MOTHER OF GOD! Is that the Archlight from mount Jarmo you have there in your
+    hand! The legend told us about a person who could hold one of the four holy Archlights
+    without turning to dust.
+  - 'Oh, I see, your new around here, well then I would probably recommend you going
+    south, down to the farm. '
+  - Grandma Carol is really old and therefore knows her way around here and can probably
+    help you scratch up some money for food and tell you more about the story about
+    the four Archlights.
+  - 'I''m afraid I can''t help you much more because of my business. Hope you get
+    more help, See Ya! '
