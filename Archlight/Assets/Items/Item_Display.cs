@@ -85,14 +85,37 @@ namespace TMPro.Examples
         // transform.position = new Vector2((Input.mousePosition.x), Input.mousePosition.y);
         private void OnTriggerEnter2D(Collider2D col)
         {
+            if (col.gameObject.tag == "Slot")
+            {
+                if(col.gameObject.GetComponent<Item_MOV>().anythinginslot)
+                {
+                    if(col.gameObject.GetComponentInChildren<Item_Display>().item == item)
+                    {
+                        //Check if we even can combine them
+                        if (col.gameObject.GetComponentInChildren<Item_Display>().howmanycanstack >=
+                            col.gameObject.GetComponentInChildren<Item_Display>().howmanyinslot + howmanyinslot)
+                        {
+                            //Combine them
+                            col.gameObject.GetComponentInChildren<Item_Display>().howmanyinslot += howmanyinslot;
+                            //TERMINATE THIS OBJECT MUAHHAHAAHA
+                            Destroy(gameObject);
+                        }
+                    }
+                    
+                }
+              
+                //transform.SetParent(col.gameObject.transform);
+                //transform.parent.GetComponent<Item_MOV>().anythinginslot = true;
+            }
+
             if (col.gameObject.tag == "Slot" && !col.gameObject.GetComponent<Item_MOV>().anythinginslot)
             {
                 transform.SetParent(col.gameObject.transform);
                 transform.parent.GetComponent<Item_MOV>().anythinginslot = true;
             }
-            
-                
-            
+
+
+
         }
         private void OnTriggerStay2D(Collider2D col)
         {
