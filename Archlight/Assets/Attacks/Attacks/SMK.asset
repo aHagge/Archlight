@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: SMK
   m_EditorClassIdentifier: 
   Attack_Name: SMK
+  description: 4
   dmg: 100
   heal: 0
-  staminatake: 0
+  staminatake: 30
   staminafill: 0
   dmgallteam: 0
   healallteam: 0
+  current: 0

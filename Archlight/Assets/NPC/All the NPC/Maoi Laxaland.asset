@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Maoi Laxaland
   m_EditorClassIdentifier: 
   NPC_Name: Maoi Laxaland
-  idle_anim: {fileID: 21300004, guid: 51fcf614f8d232a47ae3aad8dad599bc, type: 3}
+  idle_anim: {fileID: 21300000, guid: e13f8dcb562cca040a45efa33e9651b2, type: 3}
   Dialogs:
-  - ' Hello, my name is Maoi. I am the best, and the only blacksmith in town. So if
+  - 'Hello, my name is Maoi. I am the best, and the only blacksmith in town. So if
     you ever need to buy something out of metal just come to me and il see what I
     can do for you. '
   - HOLY MOTHER OF GOD! Is that the Archlight from mount Jarmo you have there in your

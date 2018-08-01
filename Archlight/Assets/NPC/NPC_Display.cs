@@ -10,11 +10,12 @@ namespace TMPro.Examples
 
         public NPC npc;
 
-        public GameObject dialogbox;
+        public GameObject dialogbox, headbox;
 
         public TextMeshProUGUI dialognamebox;
         public TextMeshProUGUI dialogtextbox;
 
+        
         public static GameObject talkingtonpc;
 
 
@@ -22,7 +23,9 @@ namespace TMPro.Examples
 
         private void Start()
         {
+            FindObjectOfType<AudioManager>().Play("Test");
             dialogbox.SetActive(false);
+            headbox.SetActive(false);
         }
         void Update()
         {
@@ -33,6 +36,7 @@ namespace TMPro.Examples
                 {
                     i = 0;
                     dialogbox.SetActive(false);
+                    headbox.SetActive(false);
                     Dialog.dialogpage = 0;
                 } else
                 {
@@ -52,6 +56,7 @@ namespace TMPro.Examples
             {
                 i = 0;
                 dialogbox.SetActive(false);
+                headbox.SetActive(false);
                 Dialog.dialogpage = 0;
 
             }
@@ -80,6 +85,8 @@ namespace TMPro.Examples
         }
         public void DialogStart()
         {
+            headbox.GetComponent<Image>().sprite = npc.headimg;
+            headbox.SetActive(true);
             dialogbox.SetActive(true);
             dialognamebox.text = npc.NPC_Name;
             

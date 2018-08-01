@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: Albin
   m_EditorClassIdentifier: 
   Attack_Name: Albin
-  dmg: 100
+  description: 1
+  dmg: 20
   heal: 0
-  staminatake: 0
+  staminatake: 10
   staminafill: 0
   dmgallteam: 1
   healallteam: 0
+  current: 3

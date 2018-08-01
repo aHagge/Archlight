@@ -57,7 +57,7 @@ public class Enemie_Display : MonoBehaviour {
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        id = 0;
+        gameObject.name = gameObject.transform.position.ToString();
         health = +1;
         StartCoroutine(waitsmall());
         
@@ -76,7 +76,7 @@ public class Enemie_Display : MonoBehaviour {
     }
     public GameObject dieeffect;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Healthslider != null)
         {
@@ -117,7 +117,7 @@ public class Enemie_Display : MonoBehaviour {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<BoxCollider2D>().enabled = false;
             player.SetActive(false);
-            SceneManager.LoadScene(3);          
+            SceneManager.LoadScene(4);          
         }
 
     }

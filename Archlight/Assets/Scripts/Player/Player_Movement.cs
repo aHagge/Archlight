@@ -8,6 +8,8 @@ public class Player_Movement : MonoBehaviour {
 
     public KeyCode rightkey, upkey, downkey, leftkey;
 
+    public GameObject inventoryhub;
+    public GameObject armorinventoryhub;
     public Animator anim;
 	// Use this for initialization
 	void Start () {

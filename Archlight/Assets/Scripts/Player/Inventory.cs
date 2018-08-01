@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject inventoryhub;
+    public GameObject armorinventoryhub;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(inventoryhub.activeInHierarchy)
+            {
+                inventoryhub.SetActive(false);
+                armorinventoryhub.SetActive(false);
+            } else
+            {
+                inventoryhub.SetActive(true);
+                armorinventoryhub.SetActive(true);
+            }
+        }
+    }
 }

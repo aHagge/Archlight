@@ -8,6 +8,7 @@ public class Attacks_Script : ScriptableObject
 
     public string Attack_Name;
 
+    public string description;
     public int dmg;
 
     public int heal;
@@ -19,4 +20,11 @@ public class Attacks_Script : ScriptableObject
     public bool dmgallteam;
     public bool healallteam;
 
+    public enum State
+    {
+        attack, heal, healall, attackall, stamina, staminaall
+    }
+
+    public State current;
+    
 }

@@ -9,6 +9,9 @@ namespace TMPro.Examples
         public GameObject button2,button3,button4;
 
         public static bool pressed;
+
+        public GameObject statobject;
+
         public TextMeshProUGUI Text;
 
         public GameObject parent;
@@ -20,6 +23,7 @@ namespace TMPro.Examples
         {
             Text.text = attack.Attack_Name;
             parent.SetActive(false);
+            statobject.SetActive(false);
         }
 
         public void Usetheability()
@@ -27,11 +31,14 @@ namespace TMPro.Examples
             pressed = true;
             Player_Attacks.attack = attack;
             parent.SetActive(false);
-
+            statobject.SetActive(true);
+            statobject.GetComponentInChildren<TextMeshProUGUI>().text = attack.description;
             button2.SetActive(true);
             button3.SetActive(true);
             button4.SetActive(true);
         }
+
+
     }
 
 }

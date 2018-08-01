@@ -37,6 +37,8 @@ namespace TMPro.Examples
         public static int dmgbyplayertoenemy;
         public static bool dmgtoallplayers;
         public static string enemyattackedto;
+        public static int healamount;
+        public static int staminaamount;
 
         public GameObject Enemy1;
         public Game_manager gamemanagerscript;
@@ -209,7 +211,7 @@ namespace TMPro.Examples
             SceneManager.LoadScene(2);
         }
         // Update is called once per frame
-        void FixedUpdate()
+        void Update()
         {
 
             gamemanagerscript = GameObject.Find("Game manager").GetComponent<Game_manager>();
@@ -321,10 +323,28 @@ namespace TMPro.Examples
         public string whattosay;
         private bool working;
 
+        public static Attacks_Script attackusedused;
+
         IEnumerator playerinfodialog()
         {
             working = true;
-            whattosay = (Game_manager.Playername + " attacked a " + enemyattackedto + " with "+ attackbeingusedbyplayer + " causing "+ dmgbyplayertoenemy + " dmg to the enemy while taking "+ staminataken +" stamina from "+ Game_manager.Playername);
+            //if(attack.current = attack or heal
+            if(attackusedused.current == Attacks_Script.State.attack)
+            {
+                whattosay = (Game_manager.Playername + " attacked a " + enemyattackedto + " with " + attackbeingusedbyplayer + " causing " + dmgbyplayertoenemy + " dmg to the enemy while taking " + staminataken + " stamina to do");
+            }
+            if (attackusedused.current == Attacks_Script.State.heal)
+            {
+                whattosay = (Game_manager.Playername + " healed " + healamount + "hp taking " + staminataken + " stamina points to do");
+            }
+            if (attackusedused.current == Attacks_Script.State.attackall)
+            {
+                whattosay = (Game_manager.Playername + " attacked all enemys with " + attackbeingusedbyplayer + " wich did " + dmgbyplayertoenemy + "dmg and took " + staminataken + " stamina to do");
+            }
+            if (attackusedused.current == Attacks_Script.State.stamina)
+            {
+                whattosay = (Game_manager.Playername + " refilled with " + attackusedused.staminafill + " more stamina");
+            }
             Dialogbox.SetActive(true);
             for (i = 0; i < whattosay.Length + 1; i++)
             {

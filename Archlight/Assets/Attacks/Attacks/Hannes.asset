@@ -11,10 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6c9ac5cb09d704aa5a8340ec6a0427, type: 3}
   m_Name: Hannes
   m_EditorClassIdentifier: 
-  Attack_Name: Hannes attack
+  Attack_Name: Hannes
+  description: 2
   dmg: 1
-  heal: 0
-  staminatake: 0
-  staminafill: 0
-  dmgallteam: 0
+  heal: 1
+  staminatake: 100
+  staminafill: 90
+  dmgallteam: 1
   healallteam: 0
+  current: 3

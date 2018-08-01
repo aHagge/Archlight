@@ -15,7 +15,7 @@ public class Loading : MonoBehaviour {
 
     private void Start()
     {
-        Loadlevel(2);
+        Loadlevel(3);
     }
     IEnumerator LoadAsynch(int sceneIndex)
     {

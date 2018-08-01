@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6a39e102d96cb4a827d6540000dc8a, type: 3}
+  m_Name: Toxic Fox
+  m_EditorClassIdentifier: 
+  Name: Toxic Fox
+  description: Big and hairy. Attacks alone when you least expect it. Dont let it
+    fool you.
+  Icon: {fileID: 21300000, guid: f7df394289e238b489e9e095bf06ea04, type: 3}
+  flocksprite: {fileID: 21300000, guid: f7df394289e238b489e9e095bf06ea04, type: 3}
+  idleanim: []
+  look: {fileID: 21300000, guid: f7df394289e238b489e9e095bf06ea04, type: 3}
+  Health: 130
+  size: {x: 9, y: 9}
+  Attack1: Bite
+  attack1_dmg: 15
+  Attack2: Claw
+  attack2_dmg: 20
+  Attack3: Full moon
+  attack3_dmg: 1

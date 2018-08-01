@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouselight: {fileID: 857162243}
+  scenetochangeto: 1
 --- !u!4 &500644637
 Transform:
   m_ObjectHideFlags: 0
@@ -446,7 +447,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 27.75
+  m_fontSize: 22.05
   m_fontSizeBase: 18.52
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -901,7 +902,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
+  m_fontSize: 23.85
   m_fontSizeBase: 18.52
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1098,7 +1099,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 27.1
+  m_fontSize: 21.65
   m_fontSizeBase: 18.52
   m_fontWeight: 400
   m_enableAutoSizing: 1

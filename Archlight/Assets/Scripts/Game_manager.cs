@@ -14,10 +14,16 @@ public class Game_manager : MonoBehaviour {
     public static List<string> killus = new List<string>();
 
 
+    public GameObject console;
+    public GameObject[] allitems;
+    public GameObject[] slots;
+
+
     public static string Playername = "KIMMY";
 
     // Use this for initialization
     void Start () {
+        console.SetActive(false);
         me = gameObject;
         if (!created)
         {
@@ -69,13 +75,72 @@ public class Game_manager : MonoBehaviour {
     }
     // Update is called once per frame
     void FixedUpdate () {
+        Playername = MenuManager.charachtername;
         float playerposx = player.transform.position.x ;
         float playerposy = player.transform.position.y;
         float playerposz = player.transform.position.z;
         PlayerPrefs.SetFloat("playerx", playerposx);
         PlayerPrefs.SetFloat("playery", playerposy);
         PlayerPrefs.SetFloat("playerz", playerposz);
+
+
+        
     }
 
-    
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            if(console.activeInHierarchy)
+            {
+                console.SetActive(false);
+            } else
+            {
+                console.SetActive(true);
+            }
+        }
+    }
+    public void Additem (int itemID)
+    {
+        foreach(GameObject a in slots)
+        {
+            
+            if (!a.GetComponent<Item_MOV>().anythinginslot)
+            {
+                Instantiate(allitems[itemID], a.transform.position ,Quaternion.identity,a.transform.parent);
+                break;
+            } else
+            {
+                    print("1");
+                    if (a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().item == allitems[itemID].GetComponent<TMPro.Examples.Item_Display>().item)
+                    {
+                        print("2");
+                        if (!a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().full)
+                        {
+                            print("3");
+                            a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().howmanyinslot++;
+                            if (a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().howmanyinslot == a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().howmanycanstack)
+                            {
+                                print("4");
+                                a.transform.GetComponentInChildren<TMPro.Examples.Item_Display>().full = true;
+                            }
+                            break;
+                        }
+
+                    }              
+                              
+            }
+        }              
+    }
+    [HideInInspector]
+    public int temp;
+    public void additem(string id)
+    {
+        temp = int.Parse(id);
+    }
+
+    public void enter()
+    {
+        Additem(temp);
+    }
 }
